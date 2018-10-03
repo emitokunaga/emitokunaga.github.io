@@ -9,12 +9,19 @@
       height: 300px;
     }
   </style>
-  
+  <script>
+    window.onload = function() {
+      var aaa = document.getElementById('aaa');
+      setTimeout(function () {
+        aaa.setAttrubute('display', 'none');
+      }, 10000);
+    }
+  </script>
 </head>
 <body>
 
   <h1>えみのポートフォリオ</h1>
   <div><a href="about.html">自己紹介のページ</a></div>
-  <div><img src="S__13197339.jpg"></div>
+  <div id="aaa"><img src="S__13197339.jpg"></div>
 </body>
 </html>
