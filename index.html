@@ -1,6 +1,24 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|K2D|Quicksand" rel="stylesheet">
+  <meta charset="utf-8">
+<title>メニューリストを横並びで表示する</title>
+<link rel="stylesheet" type="text/css" href="./css/common-style.css">
+<script src="./js/jquery-1.10.2.min.js"></script>
+<script>
+$(function() {
+	const MENU_HTML = "menu.html";
+	function setNavi () {
+		$.get(
+			MENU_HTML,
+			function (data) {
+				$('.menu').html(data)
+			}
+		);
+	}
+	setNavi();
+});
+</script>
   <style>
  
     body {
@@ -17,15 +35,53 @@
       width: 1000px;
       height: 1500px;
     }
+    .menu {
+	font-size: 1.5em;
+	width : auto; /* リキッドデザインにするため*/
+	height : 30px;
+	background-color : midnightblue;
+}
+
+.menu ul {
+	margin; 0;
+	padding: 0;
+	width: 700px; /*　横幅の最小値 */
+}
+
+.menu li {
+	list-style-type: none;
+	float: left;
+}
+
+.menu li a {
+	display: block;
+	width: 120px;
+	line-height: 30px;
+	border-right: solid 1px #ffffff;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	background-color: midnightblue;
+}
+.menu li a:hover {
+	background-color: seagreen;
+}
   </style>
   
 </head>
 <body>
 
-  
+  <h1>emi's portfolio</h1>
   <center>emi's portfolio</center>
  
- 
+ <ul>
+<li><a href="menu1.html">メニュー１</a></li>
+<li><a href="menu2.html">メニュー２</a></li>
+<li><a href="menu3.html">メニュー３</a></li>
+<li><a href="menu4.html">メニュー４</a></li>
+<li><a href="menu5.html">メニュー５</a></li>
+</ul>
+  
   <div><a href="about.html"><img src="S__13197339.jpg"></a></div>
   
   
